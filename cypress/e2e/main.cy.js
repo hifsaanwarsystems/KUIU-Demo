@@ -22,7 +22,11 @@ describe('KUIU Demo', () => {
     shoppage.shopPage()
     shoppage.addingProducts()
     shoppage.minicartverification()
-    checkouttemp.cartPage()
+    
 
+  })
+  it('Checking Out',()=>{
+    checkouttemp.cartPage()
+    checkouttemp.checkout()
   })
 })
