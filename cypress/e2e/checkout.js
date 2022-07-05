@@ -27,4 +27,10 @@ export class checkout{
 
         cy.get('#continue_button').should('be.visible').click({force:true})
     }
+
+    shippingconfirmation()
+    {
+        cy.get(':nth-child(1) > .content-box > .content-box__row').should('be.visible')
+        cy.get('#continue_button').should('be.visible').click({force:true})
+    }
 }
