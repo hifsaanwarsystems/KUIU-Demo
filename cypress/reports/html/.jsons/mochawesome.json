@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-07-05T12:23:25.865Z",
+    "end": "2022-07-05T12:33:56.803Z",
+    "duration": 630938,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "22aca2cb-206a-4784-a73b-9c46e9f23bb6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\main.cy.js",
+      "file": "cypress\\e2e\\main.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b6a222eb-5fbf-407b-9ec6-9daf0a288aae",
+          "title": "KUIU Demo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Visiting Site",
+              "fullTitle": "KUIU Demo Visiting Site",
+              "timedOut": null,
+              "duration": 47517,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.kuiu.com/');",
+              "err": {},
+              "uuid": "9cc83a2e-0e02-4fb9-91e0-dd2545a15498",
+              "parentUUID": "b6a222eb-5fbf-407b-9ec6-9daf0a288aae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Registered User Login",
+              "fullTitle": "KUIU Demo Registered User Login",
+              "timedOut": null,
+              "duration": 138445,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "acc.login(getvalue.email, getvalue.password);\nacc.myaccount();",
+              "err": {},
+              "uuid": "52326ac3-c943-4d72-8cf1-b07c159bda39",
+              "parentUUID": "b6a222eb-5fbf-407b-9ec6-9daf0a288aae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Adding Products to cart",
+              "fullTitle": "KUIU Demo Adding Products to cart",
+              "timedOut": null,
+              "duration": 440444,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "shoppage.shopPage();\nacc.login(getvalue.email, getvalue.password);\nacc.myaccount();\nshoppage.shopPage();\nshoppage.addingProducts();\nshoppage.minicartverification();\ncheckouttemp.cartPage();\ncheckouttemp.checkout();\ncheckouttemp.shipping(shippingdata.company, shippingdata.addresss, shippingdata.apartment, shippingdata.city, shippingdata.zipcode, shippingdata.phone);\ncheckouttemp.shippingconfirmation();\ncheckouttemp.paymentPage();",
+              "err": {},
+              "uuid": "d5ce9ea9-2412-4b73-959e-39e8302feeb8",
+              "parentUUID": "b6a222eb-5fbf-407b-9ec6-9daf0a288aae",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9cc83a2e-0e02-4fb9-91e0-dd2545a15498",
+            "52326ac3-c943-4d72-8cf1-b07c159bda39",
+            "d5ce9ea9-2412-4b73-959e-39e8302feeb8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 626406,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

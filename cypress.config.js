@@ -7,6 +7,7 @@ module.exports = defineConfig({
   viewportHeight:1400,
   viewportWidth:1200,
   retries:1,
+  chromeWebSecurity:false,
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
     charts: true,

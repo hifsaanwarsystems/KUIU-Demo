@@ -30,6 +30,7 @@ describe('KUIU Demo', () => {
     checkouttemp.checkout()
     checkouttemp.shipping(shippingdata.company,shippingdata.addresss,shippingdata.apartment,shippingdata.city,shippingdata.zipcode,shippingdata.phone)
     checkouttemp.shippingconfirmation()
+    checkouttemp.paymentPage()
   })
  
 })

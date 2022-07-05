@@ -33,4 +33,21 @@ export class checkout{
         cy.get(':nth-child(1) > .content-box > .content-box__row').should('be.visible')
         cy.get('#continue_button').should('be.visible').click({force:true})
     }
+    paymentPage()
+    {
+        cy.get(':nth-child(1) > .content-box > .content-box__row').should('be.visible')
+        cy.get('#main-header').should('be.visible').should('include.text','Payment')
+
+       // cy.wait(100000)
+       cy.get('.shown-if-js > #continue_button').should('be.visible')
+        // cy.iframe('.card-fields-iframe').eq(0).then(($iframe)=>{
+        //    const body= $iframe.contents().find('body')
+        // })
+
+        // cy.get('.card-fields-iframe').eq(0).then(($iframe) => {
+        //     const  $body = $iframe.contents().find('body')
+        //     cy.wrap($body).find('input').click().type('11111111111111111111111111111')
+        // })
+
+    }
 }
