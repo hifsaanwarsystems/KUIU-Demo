@@ -8,7 +8,9 @@ shopPage()
     cy.get('.static-hero-image').should('be.visible')
 
     //going to pants page
-    cy.get(':nth-child(3) > .item-card > .item-card-info > .Product-Tile-Name').click({force:true})
+    //cy.get(':nth-child(3) > .item-card > .item-card-info > .Product-Tile-Name').click({force:true})
+    //cy.get(':nth-child(4) > .item-card > .item-card-info > .Product-Tile-Name').click({force:true})
+    cy.visit('https://www.kuiu.com/collections/pants-shorts')
 }
 
 addingProducts()

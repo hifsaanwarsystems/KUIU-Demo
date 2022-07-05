@@ -2,6 +2,11 @@ const { defineConfig } = require("cypress");
 const { beforeRunHook, afterRunHook } = require('cypress-mochawesome-reporter/lib');
 module.exports = defineConfig({
   projectId: '4bug8s',
+  pageLoadTimeout:100000,
+  defaultCommandTimeout:100000,
+  viewportHeight:1400,
+  viewportWidth:1200,
+  retries:1,
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
     charts: true,
@@ -17,10 +22,7 @@ module.exports = defineConfig({
       console.log(config) // see everything in here!
       
       // modify config values
-      config.defaultCommandTimeout = 100000
-      config.pageLoadTimeout=100000
-      config.viewportHeight=1400
-      config.viewportWidth=1200
+     
       on('before:run', async (details) => {
         console.log('override before:run');
         await beforeRunHook(details);

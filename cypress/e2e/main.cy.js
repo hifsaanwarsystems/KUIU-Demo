@@ -4,6 +4,7 @@ import {account} from './account'
 import { shop } from './shop'
 import { checkout} from './checkout'
 const getvalue=require('../fixtures/account.json')
+const shippingdata=require('../fixtures/shipping.json')
 describe('KUIU Demo', () => {
   const acc=new account()
   const shoppage=new shop()
@@ -20,13 +21,15 @@ describe('KUIU Demo', () => {
   })
   it('Adding Products to cart',()=>{
     shoppage.shopPage()
+    acc.login(getvalue.email,getvalue.password)
+    acc.myaccount()
+    shoppage.shopPage()
     shoppage.addingProducts()
-    shoppage.minicartverification()
-    
+   shoppage.minicartverification()
+      checkouttemp.cartPage()
+    checkouttemp.checkout()
+    checkouttemp.shipping(shippingdata.company,shippingdata.addresss,shippingdata.apartment,shippingdata.city,shippingdata.zipcode,shippingdata.phone)
 
   })
-  it('Checking Out',()=>{
-    checkouttemp.cartPage()
-    checkouttemp.checkout()
-  })
+ 
 })
