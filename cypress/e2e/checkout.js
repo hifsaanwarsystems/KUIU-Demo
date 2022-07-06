@@ -1,5 +1,5 @@
 /// <reference types="cypress"/>
-
+import '../support/commands'
 export class checkout{
 
     cartPage()
@@ -33,13 +33,20 @@ export class checkout{
         cy.get(':nth-child(1) > .content-box > .content-box__row').should('be.visible')
         cy.get('#continue_button').should('be.visible').click({force:true})
     }
+    
     paymentPage()
     {
         cy.get(':nth-child(1) > .content-box > .content-box__row').should('be.visible')
         cy.get('#main-header').should('be.visible').should('include.text','Payment')
 
-       // cy.wait(100000)
+     cy.wait(30000)
        cy.get('.shown-if-js > #continue_button').should('be.visible')
+
+    //    cy.get('iframe[title="Field container for: Card number"]').should('be.visible').its('body') .then(cy.wrap)
+       cy.addcardno().find('#number').click().type('2222 4000 7000 0005')
+       cy.addcardname().find('#name').click().type('HENNA MONTANA')
+       cy.addexpirationdate().find('#expiry').click().type('0324')
+       cy.addcccode().find('#verification_value').click().type('737')
         // cy.iframe('.card-fields-iframe').eq(0).then(($iframe)=>{
         //    const body= $iframe.contents().find('body')
         // })
